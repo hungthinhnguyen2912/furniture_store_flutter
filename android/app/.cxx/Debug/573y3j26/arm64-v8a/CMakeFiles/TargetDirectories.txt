@@ -1,0 +1,2 @@
+D:/furniture_store-main/android/app/.cxx/Debug/573y3j26/arm64-v8a/CMakeFiles/edit_cache.dir
+D:/furniture_store-main/android/app/.cxx/Debug/573y3j26/arm64-v8a/CMakeFiles/rebuild_cache.dir
