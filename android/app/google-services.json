@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1067518628841",
+    "project_id": "furniture-store-f159c",
+    "storage_bucket": "furniture-store-f159c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1067518628841:android:3979c42528c5ce24b6f178",
+        "android_client_info": {
+          "package_name": "com.sinasys.office_furniture_store"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrnsVyRLsa19fvjAITWxtrGneZs3VB4XM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

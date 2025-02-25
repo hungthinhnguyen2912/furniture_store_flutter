@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:office_furniture_store/core/app_style.dart';
+import 'package:office_furniture_store/src/view/auth/login_screen.dart';
 import 'package:office_furniture_store/src/view/screen/home_screen.dart';
 
 class IntroScreen extends StatelessWidget {
@@ -16,7 +17,7 @@ class IntroScreen extends StatelessWidget {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (_) => const HomeScreen()),
+                MaterialPageRoute(builder: (_) => const LoginScreen()),
               );
             },
             style: ButtonStyle(
