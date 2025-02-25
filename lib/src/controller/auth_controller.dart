@@ -30,4 +30,8 @@ class AuthController extends GetxController {
       Get.snackbar("Something went wrong", "${e.toString()}");
     }
   }
+  Future<void> signOut () async {
+    await P.authFirebase.signOut();
+  }
+
 }
