@@ -22,19 +22,20 @@ class LoginScreen extends StatelessWidget {
           MyTextField(
               controller: _passController, hintext: "Password", obs: true),
           const SizedBox(height: 20,),
-          Container(
-            width: 410,
-            height: 40,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              color: AppColor.lightOrange,
+          GestureDetector(
+            onTap: () => Login(_emailController.text, _passController.text),
+            child: Container(
+              width: 410,
+              height: 40,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: AppColor.lightOrange,
+              ),
+                child: const Center(child: Text("Log in")),
+              ),
             ),
-            child: GestureDetector(
-              onTap: () => Login(_emailController.text, _passController.text),
-              child: const Center(child: Text("Log in")),
-            ),
-          ),
           Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const Text("New user ?"),
               TextButton(onPressed: () {

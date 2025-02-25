@@ -6,9 +6,13 @@ import 'package:office_furniture_store/src/view/screen/home_screen.dart';
 class AuthController extends GetxController {
   Future<void> signIn(String email, String password) async {
     try {
-      P.authFirebase.signInWithEmailAndPassword(email: email, password: password);
-      Get.off(const HomeScreen());
-    } on FirebaseAuthException catch (e) {
+      UserCredential userCredential = await P.authFirebase.signInWithEmailAndPassword(email: email, password: password);
+      if (userCredential.user != null) {
+        Get.off(() => const HomeScreen());
+      } else {
+        Get.snackbar("Error", "User not found");
+      }
+    } catch (e) {
       Get.snackbar("Something went wrong", "${e.toString()}");
     };
   }
@@ -21,8 +25,8 @@ class AuthController extends GetxController {
         "name" : userName
       };
       await P.firestore.collection('Users').doc(userCredential.user!.uid).set(userData);
-      Get.off(const HomeScreen());
-    } on FirebaseAuthException catch (e) {
+      Get.off(() => const HomeScreen());
+        }  catch (e) {
       Get.snackbar("Something went wrong", "${e.toString()}");
     }
   }

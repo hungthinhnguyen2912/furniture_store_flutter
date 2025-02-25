@@ -21,7 +21,7 @@ class RegisterScreen extends StatelessWidget {
           MyTextField(
               controller: _nameController, hintext: "User name", obs: false),
           MyTextField(
-              controller: _passController, hintext: "Email", obs: true),
+              controller: _emailController, hintext: "Email", obs: false),
           MyTextField(
               controller: _passController, hintext: "Password", obs: true),
           MyTextField(
